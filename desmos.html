@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desmos</title>
+    <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=cc1c1fffd84e4e4f96fceb9e1397577c"></script>
+
+</head>
+
+<body>
+
+<h1>Look at my cool Desmos rainbow :P</h1>
+<div id="calculator" style="width: 75vw; height: 75vh;"></div>
+<script>
+  var elt = document.getElementById('calculator');
+  var calculator = Desmos.GraphingCalculator(elt);
+
+    for(var i = 0; i < 255; i++) {
+        calculator.setExpression({
+    id: 'point' + i,
+    latex: 'x = ' + (i/10 - 25.4/2),
+    color: 'rgb(' + Math.floor(128 + 127 * Math.sin(i/30)) + ',' + Math.floor(128 + 127 * Math.sin(i/30 + 2)) + ',' + Math.floor(128 + 127 * Math.sin(i/30 + 4)) + ')'
+});
+console.log(i);
+    }
+</script>
+
+
+</body>
+</html>

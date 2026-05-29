@@ -1,0 +1,32 @@
+.selectionButton {
+  width: 40vw;
+  height: 40vh;
+  font-size: calc(min(20vh, 10vw));
+  background-color: #00ff00;
+  transition: transform 0.25s ease-in-out;
+
+}
+.selectionButton:hover {
+    transform: scale(120%);
+    background-color: #99ff99; /* Darker background on hover */
+}
+
+
+#title {
+  font-size: 5vw;
+  text-align: center;
+  transition: transform 0.25s ease-in-out;
+
+}
+#title:hover {
+    transform: scale(120%);
+    background-color: #99ff99; /* Darker background on hover */
+}
+
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5%;
+  margin-left: 5%;
+}
