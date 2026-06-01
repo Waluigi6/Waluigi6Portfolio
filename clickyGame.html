@@ -8,12 +8,50 @@
 </head>
 <body>
     <h2 id="title"> Dillon's Bakery</h2>
-    <img src="/Images/Cookie.png" id="Cookie" class="cookie">
+    <img src="/images/Cookie.png" id="Cookie" class="cookie">
+
+    <p id="amountOfCookies">Cookies: 0</p>
+
+    <div style="border: 4px solid hsl(0, 0%, 0%); border-radius: 3px; padding: 10px; display: inline-block; margin-top: 20px; background-color: blue;">
+        <h3>Granny</h3>
+        <img src="/images/Granny.webp" id="granny" style="width: 20vw; height: 40vh;">
+        <p id="grannyCounter">0 Grannys</p>
+        <button id="buyGranny1">1</button>
+        <button id="buyGranny10">10</button>
+        <button id="buyGranny100">100</button>
+    </div>
 
     <script>
+        let cookieCount = 0;
+        let cps = 0;
+        let grannyCounter = 0;
+
         document.getElementById("title").addEventListener("click", () => {
             document.getElementById("title").textContent = prompt("What do you wanna name your bakery?") + "'s Bakery";
         });
+
+        document.getElementById("Cookie").addEventListener("click", () => {
+            cookieCount++;
+            document.getElementById("amountOfCookies").textContent = "Cookies: " + cookieCount;
+        });
+
+        setInterval(() => {
+            cookieCount += cps;
+            document.getElementById("amountOfCookies").textContent = "Cookies: " + cookieCount;
+        }, 1000);
+
+        document.getElementById("buyGranny1").addEventListener("click", () => {
+            if (cookieCount >= 100) {
+                cookieCount -= 100;
+                grannyCounter++;
+                document.getElementById("amountOfCookies").textContent = "Cookies: " + cookieCount;
+                document.getElementById("grannyCounter").textContent = grannyCounter + " Grannys";
+                cps += 1; 
+            } else {
+                alert("Bro does not have enough cookeis");
+            }
+        });
+
     </script>
 </body>
 </html>
