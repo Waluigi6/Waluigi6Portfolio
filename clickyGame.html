@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/clickyGame.css">
+    <title>Clicky Game</title>
+</head>
+<body>
+    <h2 id="title"> Dillon's Bakery</h2>
+    <img src="/Images/Cookie.png" id="Cookie" class="cookie">
+
+    <script>
+        document.getElementById("title").addEventListener("click", () => {
+            document.getElementById("title").textContent = prompt("What do you wanna name your bakery?") + "'s Bakery";
+        });
+    </script>
+</body>
+</html>
