@@ -1,0 +1,14 @@
+.cookie {
+  width: 20vw;
+  height: 40vh;
+  transition: transform 0.05s ease-in-out;
+
+}
+.cookie:hover {
+    transform: scale(103%);
+}
+
+.cookie:active {
+    transform: scale(97%);
+}
+    
