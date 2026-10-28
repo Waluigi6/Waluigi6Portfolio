@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/Waluigi6Portfolio/CSS/clickyGame.css">
+    <link rel="stylesheet" href="/clickyGame.css">
     <title>Clicky Game</title>
 </head>
 <body>
@@ -21,7 +21,8 @@
         <button id="buyGranny100">100</button>
     </div>
 
-    <script>
+<script>
+
 
 
         let cookieCount = 0;
@@ -29,9 +30,13 @@
         let grannyCounter = 0;
 
 
+
+
         document.getElementById("title").addEventListener("click", () => {
             document.getElementById("title").textContent = prompt("What do you wanna name your bakery?") + "'s Bakery";
         });
+
+
 
 
         document.getElementById("Cookie").addEventListener("click", () => {
@@ -40,10 +45,14 @@
         });
 
 
+
+
         setInterval(() => {
             cookieCount += cps;
             document.getElementById("amountOfCookies").textContent = "Cookies: " + cookieCount;
         }, 1000);
+
+
 
 
         document.getElementById("buyGranny1").addEventListener("click", () => {
@@ -61,7 +70,7 @@
         document.getElementById("buyGranny10").addEventListener("click", () => {
             if (cookieCount >= 1000) {
                 cookieCount -= 1000;
-                grannyCounter++;
+                grannyCounter += 10;
                 document.getElementById("amountOfCookies").textContent = "Cookies: " + cookieCount;
                 document.getElementById("grannyCounter").textContent = grannyCounter + " Grannys";
                 cps += 10; 
@@ -72,13 +81,13 @@
         document.getElementById("buyGranny100").addEventListener("click", () => {
             if (cookieCount >= 10000) {
                 cookieCount -= 10000;
-                grannyCounter++;
+                grannyCounter += 100;
                 document.getElementById("amountOfCookies").textContent = "Cookies: " + cookieCount;
                 document.getElementById("grannyCounter").textContent = grannyCounter + " Grannys";
                 cps += 100; 
             } else {
                 alert("Bro does not have enough cookeis");
             }
-        });    </script>
+        });</script>
 </body>
 </html>
